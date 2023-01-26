@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to File IO Operations");
             Console.WriteLine("Please enter option given below");
-            Console.WriteLine("1:File Exists\n2:Read All Lines\n3:Read All Text\n4:Copy Existing File");
+            Console.WriteLine("1:File Exists\n2:Read All Lines\n3:Read All Text\n4:Copy Existing File\n5:Delete Existing File");
             int option = Convert.ToInt32(Console.ReadLine());
             string path = "C:\\Users\\hp\\source\\repos\\FileIOOperations\\FileIOOperations\\Sample.Txt";
             //Switch case to call different method
@@ -24,6 +24,9 @@
                 case 4:
                     string path1 = "C:\\Users\\hp\\source\\repos\\FileIOOperations\\FileIOOperations\\Sample.Txt";
                     FileOperations.CopyAnExistingFile(path1);
+                    break;
+                case 5:
+                    FileOperations.DeleteFile();
                     break;
                 default:
                     Console.WriteLine("Please choose correct option");

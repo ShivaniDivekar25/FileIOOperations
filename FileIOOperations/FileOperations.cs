@@ -82,5 +82,21 @@ namespace FileIOOperations
                 Console.WriteLine(ex.Message);
             }
         }
+        //Created method to delete file
+        public static void DeleteFile()
+        {
+            try
+            {
+                string destination = "C:\\Users\\hp\\source\\repos\\FileIOOperations\\FileIOOperations\\Destination.Txt";
+                if (File.Exists(destination))
+                {
+                    File.Delete(destination);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
