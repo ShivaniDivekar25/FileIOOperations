@@ -50,5 +50,21 @@ namespace FileIOOperations
                 Console.WriteLine(ex.Message);
             }
         }
+        //Created method to read all text
+        public static void ReadAllLinesAtOnce(string path)
+        {
+            try
+            {
+                if (File.Exists(path))
+                {
+                    string lines = File.ReadAllText(path);
+                    Console.WriteLine(lines);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
