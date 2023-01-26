@@ -1,1 +1,13 @@
-[{"ID":1,"Name":"Sindhu","Address":"Banglr"},{"ID":2,"Name":"Haresh","Address":"Mumbai"}]
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfContact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Contact>
+    <ID>1</ID>
+    <Name>Sindhu</Name>
+    <Address>Banglr</Address>
+  </Contact>
+  <Contact>
+    <ID>2</ID>
+    <Name>Haresh</Name>
+    <Address>Mumbai</Address>
+  </Contact>
+</ArrayOfContact>
