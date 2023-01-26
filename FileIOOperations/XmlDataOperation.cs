@@ -30,5 +30,21 @@ namespace FileIOOperations
                 Console.WriteLine(ex.Message);
             }
         }
+        //Created method for Xml DeSerialize 
+        public static void XmlDeSerializer()
+        {
+            try
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Contact>));
+                FileStream stream = new FileStream(path, FileMode.Open);
+                List<Contact> list = (List<Contact>)xmlSerializer.Deserialize(stream);
+                if (list.Count > 1)
+                    Console.WriteLine("Successfully done with xml deserialize");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
