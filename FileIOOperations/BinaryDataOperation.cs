@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace FileIOOperations
 {
-    public class BinaryDataOperation
+    //Created class
+    public class BinaryDataOperation 
     {
+        //Created Binary Serialization method
         public static void BinaryDataSerialize()
         {
             try
@@ -24,6 +26,29 @@ namespace FileIOOperations
                 binaryFormatter.Serialize(stream, contact);
             }
             catch (FileNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        //Created Binary Deserialization method
+        public static void BinaryDataDeSerailize()
+        {
+            try
+            {
+                string path = "C:\\Users\\hp\\source\\repos\\FileIOOperations\\FileIOOperations\\Sample.Txt";
+                BinaryFormatter binaryFormatter = new BinaryFormatter();
+                FileStream stream = new FileStream(path, FileMode.Open);
+                List<Contact> listOfContacts = (List<Contact>)binaryFormatter.Deserialize(stream);
+                foreach (Contact contact in listOfContacts)
+                {
+                    Console.WriteLine(contact);
+                }
+            }
+            catch (ArgumentNullException ex)
             {
                 Console.WriteLine(ex.Message);
             }
