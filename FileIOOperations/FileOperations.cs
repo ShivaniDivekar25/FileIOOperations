@@ -31,5 +31,24 @@ namespace FileIOOperations
             }
             return default;
         }
+        //Created method to read all lines
+        public static void ReadAllLines(string path)
+        {
+            try
+            {
+                if (File.Exists(path))
+                {
+                    string[] lines = File.ReadAllLines(path);
+                    foreach (string line in lines)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
