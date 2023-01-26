@@ -66,5 +66,21 @@ namespace FileIOOperations
                 Console.WriteLine(ex.Message);
             }
         }
+        //Created method to copy an existing file
+        public static void CopyAnExistingFile(string path)
+        {
+            try
+            {
+                string destination = "C:\\Users\\hp\\source\\repos\\FileIOOperations\\FileIOOperations\\Destination.txt";
+                if (File.Exists(path))
+                {
+                    File.Copy(path, destination);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
