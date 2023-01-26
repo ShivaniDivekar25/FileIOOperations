@@ -98,5 +98,22 @@ namespace FileIOOperations
                 Console.WriteLine(ex.Message);
             }
         }
+        //Created read from stream reader method
+        public static void ReadFromStreamReader(string path)
+        {
+            try
+            {
+                StreamReader sr = File.OpenText(path);
+                string line = "";
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
