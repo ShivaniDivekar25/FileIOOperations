@@ -114,6 +114,19 @@ namespace FileIOOperations
             {
                 Console.WriteLine(ex.Message);
             }
+        }//Created method for file stream writer
+        public static void FileStreamWriter(string path)
+        {
+            try
+            {
+                StreamWriter sw = File.AppendText(path);
+                sw.WriteLine("One more new line of Data");
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

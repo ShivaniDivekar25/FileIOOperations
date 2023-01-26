@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to File IO Operations");
             Console.WriteLine("Please enter option given below");
-            Console.WriteLine("1:File Exists\n2:Read All Lines\n3:Read All Text\n4:Copy Existing File\n5:Delete Existing File\n6:Read from Stream Reader");
+            Console.WriteLine("1:File Exists\n2:Read All Lines\n3:Read All Text\n4:Copy Existing File\n5:Delete Existing File\n6:Read from Stream Reader\n7:File Stream Writer\n8:Binary Data Serialize");
             int option = Convert.ToInt32(Console.ReadLine());
             string path = "C:\\Users\\hp\\source\\repos\\FileIOOperations\\FileIOOperations\\Sample.Txt";
             //Switch case to call different method
@@ -30,6 +30,12 @@
                     break;
                 case 6:
                     FileOperations.ReadFromStreamReader(path);
+                    break;
+                case 7:
+                    FileOperations.FileStreamWriter(path);
+                    break;
+                case 8:
+                    BinaryDataOperation.BinaryDataSerialize();
                     break;
                 default:
                     Console.WriteLine("Please choose correct option");
